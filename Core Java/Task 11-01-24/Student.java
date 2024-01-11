@@ -1,7 +1,7 @@
 public class Student {
-    int sid;
-    String name;
-    int age;
+    private int sid;
+    private String name;
+    private int age;
 
     public Student(int sid) {
         this.sid = sid;
