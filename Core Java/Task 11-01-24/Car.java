@@ -1,7 +1,7 @@
 public class Car {
-    String make;
-    String model;
-    int year;
+    private String make;
+    private String model;
+    private int year;
 
     public Car(){
         this.make = "Nissan";
