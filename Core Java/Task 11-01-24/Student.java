@@ -19,7 +19,7 @@ public class Student {
     }
 
     public String toString(){
-        String str = String.format("Student ID: %s \nStudent Name: %s \nStudent Age: %s\n",sid,name,age);
+        String str = String.format("Student ID: %d \nStudent Name: %s \nStudent Age: %d\n",sid,name,age);
         return str;
     }
     

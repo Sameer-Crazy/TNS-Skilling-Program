@@ -16,7 +16,7 @@ public class BankAccount {
         this.accBalance = accBalance;
     }
     public String toString(){
-        String str = String.format("Account no: %s \nAccount Holder Name: %s\nAccount Balance: %s\n",accno,accHolderName,accBalance);
+        String str = String.format("Account no: %d \nAccount Holder Name: %s\nAccount Balance: %d\n",accno,accHolderName,accBalance);
         return str;
     }
     public static void main(String[] args) {

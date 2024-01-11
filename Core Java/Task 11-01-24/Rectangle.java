@@ -11,7 +11,7 @@ public class Rectangle {
         this.width  = side;
     }
     public String toString(){
-        String str = String.format("Length: %s \nWidth: %s\n",length,width);
+        String str = String.format("Length: %d \nWidth: %d\n",length,width);
         return str;
     }
 

@@ -16,7 +16,7 @@ public class Car {
     }
 
     public String toString(){
-        String str = String.format("Make: %s \nModel: %s \nYear: %s\n",make,model,year);
+        String str = String.format("Make: %s \nModel: %s \nYear: %d\n",make,model,year);
         return str;
     }
 

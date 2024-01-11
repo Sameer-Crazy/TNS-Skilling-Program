@@ -10,7 +10,7 @@ public class Employee{
     }
 
     public String toString() {
-        String str = String.format("EID: %s \nName: %s \nSalary: %s\n",eid,name,salary);
+        String str = String.format("EID: %d \nName: %s \nSalary: %d\n",eid,name,salary);
 
         return str;
     }
