@@ -18,13 +18,15 @@ public class UserInterface {
         System.out.println("Enter College Fee");
         double collegeFee = sc.nextDouble();
 
+        Student student;
+        
         if(category.equals("DayScholar")){    
             System.out.println("Enter Bus Number");
             int busNumber = sc.nextInt();
             System.out.println("Enter Distance");
             float distance = sc.nextFloat();
 
-            DayScholar student = new DayScholar(studentId,studentName,department,gender,category,collegeFee,busNumber,distance);
+            student = new DayScholar(studentId,studentName,department,gender,category,collegeFee,busNumber,distance);
             System.out.println("Total College Fee is "+student.calculateTotalFee());
         }
         else if(category.equals("Hosteller")){    
@@ -36,7 +38,7 @@ public class UserInterface {
             System.out.println("Enter the Room Type");
             String roomType = sc.nextLine();
 
-            Hosteller student = new Hosteller(studentId,studentName,department,gender,category,collegeFee,roomNumber,blockName,roomType);
+            student = new Hosteller(studentId,studentName,department,gender,category,collegeFee,roomNumber,blockName,roomType);
             System.out.println("Total College Fee is "+student.calculateTotalFee());
         }
 
