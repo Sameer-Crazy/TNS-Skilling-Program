@@ -7,7 +7,7 @@ public class NumberPlay {
         System.out.println("Enter a number");
         int num = sc.nextInt();
 
-        if (num > 99) {
+        if (num < 10 || num > 99) {
             System.out.println("Invalid Number!");
             sc.close();
             return;
