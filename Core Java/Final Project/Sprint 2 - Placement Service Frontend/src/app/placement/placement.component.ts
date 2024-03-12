@@ -23,6 +23,7 @@ export class PlacementComponent implements OnInit{
   placementList:Placement[]=[];
   deleteId:number | null=null;
   editId:number | null=null;
+  editRecord:Placement = {companyName:"",jobTitle:"",placementDate:"",studentId:0};
 
   addNewPlacement(){
     this.placementService.addPlacement(this.newPlacement).subscribe(result=>{
@@ -49,6 +50,9 @@ export class PlacementComponent implements OnInit{
     if (id !== undefined) {
       // If id is defined, assign it to the recordId property
       this.editId = id;
+      this.placementService.getPlacementById(this.editId).subscribe(result=>{
+        this.editRecord=result;
+      });
     } else {
       // If id is undefined, log an error or handle the case appropriately
       console.error("Failed to store record ID - Placement ID is undefined");
@@ -70,7 +74,7 @@ export class PlacementComponent implements OnInit{
   editPlacement(){
     if (this.editId !== null) {
       // Call your service method to delete the record with this.deleteId
-      this.placementService.updatePlacement(this.editId,this.newPlacement).subscribe(result=>{
+      this.placementService.updatePlacement(this.editId,this.editRecord).subscribe(result=>{
         this.getPlacements();
       });
       this.newPlacement= {companyName:"",jobTitle:"",placementDate:"",studentId:0};
